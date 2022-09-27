@@ -1,0 +1,32 @@
+/* -------------------------------------------
+    Layout
+---------------------------------------------- */
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+body {
+    background: $gray-light;
+    font-family: $primary-font;
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}

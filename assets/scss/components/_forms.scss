@@ -1,0 +1,81 @@
+/* -------------------------------------------
+    Form
+---------------------------------------------- */
+form{
+    & .box{
+        background-color: $gray-light;
+        padding: 20px;
+        @include border-radius(5px);
+        @include box-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+        @include transition(all 300ms ease-in 0s); 
+        & .form-group{
+            margin-bottom: 20px;
+            &.form-col{
+                width: 50%;
+                padding-left: 10px;
+                padding-right: 10px;
+                @include media-mobile-sm {
+                    width: 100%;
+                }
+            }
+            &.select{
+                position: relative;
+                & select{
+                    cursor: pointer;
+                    -moz-appearance:none; /* Firefox */
+                    -webkit-appearance:none; /* Safari and Chrome */
+                    appearance:none;
+                }
+                &::after{
+                    @include position(absolute,$top:0,$bottom:0,$right:0);
+                    content: "\e64b";
+                    font-family: 'themify';
+                    width: 40px;
+                    height: max-content;
+                    margin: auto;
+                    text-align: center;
+                }
+            }
+            & .intl-tel-input{
+                width: 100%;
+                & .flag-container{
+                    & .selected-flag{
+                        background-color:rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+        }
+    
+     
+        & .mail{
+            position: relative;
+            & .ti-email{
+                @include position(absolute,$top:0,$right:20px,$bottom:0);
+                margin: auto;
+                height: max-content;
+            }
+        }
+    }
+}
+.form-control {
+    padding: 10px 20px;
+    font-size: 16px;
+    height: 50px;
+    background-color: $white;
+    font-family: $primary-font;
+    @include border-radius(5px);
+    border: 1px solid $gray;
+    color: $black;
+    resize: none;
+    width: 100%;
+    @include transition(all 300ms ease-in 0s); 
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $primary-color;
+    }
+}
+.error {
+    color: #ff0000;
+    font-size: 12px;
+}

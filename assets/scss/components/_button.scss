@@ -1,0 +1,22 @@
+/* -------------------------------------------
+    Button
+---------------------------------------------- */
+.btn {
+    background: $primary-color;
+    font-family: $primary-font;
+    border: none;
+    color: $white;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease-in 0s;
+    @include border-radius(5px);
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+        background: $black;
+        color: $white;
+    }
+}

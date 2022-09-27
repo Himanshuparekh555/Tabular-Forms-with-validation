@@ -1,0 +1,31 @@
+/**=====================
+    default variables
+==========================**/
+
+//font 
+$primary-font: 'Inter', sans-serif;
+
+//color variables
+$primary-color:#c1988f;
+$black: #000;
+$white: #ffffff;
+$gray: #cccccc;
+$gray-light:#fafafa;
+
+
+// Media Queries
+@mixin media-mobile-lg {
+    @media screen and (max-width : 992px) {
+        @content;
+    }
+}
+@mixin media-mobile-md {
+    @media screen and (max-width : 768px) {
+        @content;
+    }
+}
+@mixin media-mobile-sm {
+    @media screen and (max-width : 576px) {
+        @content;
+    }
+}

@@ -1,0 +1,24 @@
+/* -------------------------------------------
+    breadcrumb
+---------------------------------------------- */
+.breadcrumb{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    & .breadcrumb-item{
+        color: $gray;
+        font-size: 13px;
+        padding: 0 10px;
+        position: relative;
+        &.active{
+            position: relative;
+            &::before{
+                @include position(absolute,$left:-6px,$top:0,$bottom:0);
+                content: "\e649";
+                font-family: 'themify';
+                height: max-content;
+                margin: auto;
+            }
+        }
+    }
+}

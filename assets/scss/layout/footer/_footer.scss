@@ -1,0 +1,47 @@
+/*--------------------------------------------------------------
+ Footer
+----------------------------------------------------------------*/
+
+footer {
+    flex-shrink: 0;
+        background: $black;
+        @include transition(all 0.3s ease 0s);
+        padding: 15px 0;
+        & .links{
+            padding: 10px 0;
+            @include media-mobile-lg {
+                width: 100%;
+                justify-content: center;
+            }
+            & li{
+                & a{
+                    font-size: 13px;
+                    color: $gray;
+                    margin-right: 30px;
+                    @include media-mobile-sm {
+                        margin: 0 10px;
+                    }
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        & .social{
+            padding: 10px 0;
+            @include media-mobile-lg {
+                width: 100%;
+                justify-content: center;
+            }
+            & li{
+                @include media-mobile-lg {
+                    margin: 0 15px;
+                }
+                margin-left: 15px;
+                & a{
+                    color: $gray;
+                    &:hover{color: $primary-color;}
+                }
+            }
+        }
+}

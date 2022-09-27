@@ -1,0 +1,12 @@
+/*--------------------------------------------------------------
+ Header
+----------------------------------------------------------------*/
+
+header {
+        background: $white;
+        @include transition(all 0.3s ease 0s);
+        padding: 22px 0;
+        & .logo_Wrapper{
+            text-align: center;
+        }
+}

@@ -1,0 +1,33 @@
+﻿@charset 'UTF-8';
+
+/* 01 config
+   02 Fonts
+   03 layout
+   04 components
+   05 theme   
+*/
+/* 01 config */
+@import "plugin/mixy-sass/mixy";
+@import "plugin/mixy-sass/setting";
+
+/* 01 config */
+@import "config/variables";
+
+/* 02 Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* 03 layout */
+@import "layout/layout";
+@import "layout/helper";
+@import "layout/header/header";
+@import "layout/footer/footer";
+
+/* 04 components */
+@import "components/button";
+@import "components//forms";
+@import "components/tab";
+@import "components/breadcrumb";
+@import "components/title";
+
+/* 05 theme */
+@import "theme/theme";

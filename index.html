@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <!-- TITTLE -->
+    <title>Practical Task</title>
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/css/intlTelInput.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <!-- PAGE START -->
+    <div class="wrapper">
+        <!-- SECTION START -->
+        <section class="mt-4 mb-4">
+            <div class="container">            
+                <div class="row mb-4">
+                    <div class="form-col">
+                        <div class="form">
+                            <!-- HEADER START -->
+                            <header>
+                                <!-- main logo start -->
+                                <div class="logo_Wrapper mb-4">
+                                    <a href="#"><img src="assets/images/logo.jpg" alt="Logo"></a>
+                                </div><!-- main logo end -->
+                                <!--- breadcrumb start --->
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Information</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Delivery</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Payment</li>
+                                </ol><!--- breadcrumb end  --->
+                            </header>
+                            <!-- HEADER END'S -->
+                            <h1 class="title1">How would you like to get your order?</h1>
+                            <!--- Tab start --->
+                            <div class="tabs">
+                                <div class="d-flex justify-content-center flex-wrap">
+                                    <ul id="tabs-nav">
+                                        <li><a href="#tab1"><i class="ti-truck"></i>I'd like it delivered</a></li>
+                                        <li><a href="#tab2"><i class=" ti-bag"></i>I'II pick it up</a></li>
+                                    </ul> 
+                                </div>
+                                <div id="tabs-content">
+                                    <div id="tab1" class="tab-content">
+                                        <div class="d-flex justify-content-between align-items-center flex-wrap information-heading">
+                                            <h2 class="title2">Contact information</h2>
+                                            <p>Have an account? <a href="#">Login</a></p>
+                                        </div>
+                                        <form name="deliverForm" onsubmit="return deliveredForm()" action="" method="post">
+                                            <div class="box">
+                                                <div class="mail">
+                                                    <input class="form-control" type="text" name="email" placeholder="Email address" />
+                                                    <i class="ti-email"></i>
+                                                </div>
+                                                <div class="error" id="emailErr"></div>
+                                            </div>
+                                            <h3 class="mt-5 mb-3 title2">Where should we send your order?</h3>
+                                            <div class="box">
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="firstname" placeholder="First Name" />
+                                                    <div class="error" id="firstnameErr"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="lastname" placeholder="Last Name" />
+                                                    <div class="error" id="lastnameErr"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="area" placeholder="Apartment/Suite/Building" />
+                                                    <div class="error" id="areaErr"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" name="address" placeholder="Street Address" />
+                                                    <div class="error" id="addressErr"></div>
+                                                </div> 
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Landmark" name="landmark"/>
+                                                    <div class="error" id="landmarkErr"></div>
+                                                </div>
+                                                <div class="form-group select">
+                                                    <select class="form-control" name="country">
+                                                        <option>Country</option>
+                                                        <option>Australia</option>
+                                                        <option>India</option>
+                                                        <option>United States</option>
+                                                        <option>United Kingdom</option>
+                                                    </select>
+                                                    <div class="error" id="countryErr"></div>
+                                                </div>
+                                                <div class="form-group select">
+                                                    <select class="form-control" name="state">
+                                                        <option>State/Province</option>
+                                                        <option>Australia</option>
+                                                        <option>India</option>
+                                                        <option>United States</option>
+                                                        <option>United Kingdom</option>
+                                                    </select>
+                                                    <div class="error" id="stateErr"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group form-col">
+                                                        <input class="form-control" type="text" placeholder="City" name="city"/>
+                                                        <div class="error" id="cityErr"></div>
+                                                    </div>
+                                                    <div class="form-group form-col">
+                                                        <input class="form-control" type="text" placeholder="Zip/Postal Code" name="zipcode"/>
+                                                        <div class="error" id="zipcodeErr"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="Company" name="company"/>
+                                                    <div class="error" id="companyErr"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control countrycode" placeholder="Phone Number" name="number"/>
+                                                    <div class="error" id="numberErr"></div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input class="form-control" type="text" placeholder="VAT Number" name="vatnumber"/>
+                                                    <div class="error" id="vatnumberErr"></div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn mt-4 mb-4">Continue to Delivery</button>
+                                            <div class="text-center">
+                                            <a href="#" class="back-link"><i class=" ti-angle-left "></i> Return to Bag</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div id="tab2" class="tab-content">
+                                        <form name="pickupForm" onsubmit="return pickupedForm()" action="" method="post">
+                                            <div class="box">
+                                                <div class="mail">
+                                                    <input class="form-control" type="text" placeholder="Email address" />
+                                                    <i class="ti-email"></i>
+                                                </div>
+                                                <div class="error" id="emailpickupErr"></div>
+                                            </div>
+                                            <h3 class="mt-4 mb-3 title2">Who will pickup the order?</h3>
+                                            <div class="box">
+                                                <div class="row">
+                                                    <div class="form-group form-col">
+                                                        <input class="form-control" type="text" name="firstnamepickup" placeholder="First Name" />
+                                                        <div class="error" id="firstnamepickupErr"></div>
+                                                    </div>
+                                                    <div class="form-group form-col">
+                                                        <input class="form-control" type="text" name="lastnamepickup" placeholder="Last Name" />
+                                                        <div class="error" id="lastnamepickupErr"></div>
+                                                    </div>
+                                                </div>                                                
+                                                <div class="form-group">
+                                                    <input type="tel" class="form-control countrycode" placeholder="Phone Number" name="numberpickup"/>
+                                                    <div class="error" id="numberpickupErr"></div>
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn mt-4 mb-4">Continue to Store selection</button>
+                                            <div class="text-center">
+                                            <a href="#" class="back-link"><i class=" ti-angle-left "></i>   Return to Bag</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--- Tab end --->
+                        </div>
+                    </div>
+                    <div class="sidebar mb-4">
+                        <div class="summary">
+                            <ul class="items">
+                                <li class="item-list mb-4">
+                                    <div class="row align-items-center flex-wrap">
+                                        <div class="col-info d-flex align-items-center">
+                                            <div class="product-img">
+                                                <img src="assets/images/product-item.jpg" alt=""/>
+                                                <span class="product-qty">1</span>
+                                            </div>
+                                            <div class="product-des">
+                                                <a href="#" class="name">Beautiful Tear Cluster Ring</a>
+                                                <p class="des">Metal: 18K Gold Metal Finish: Rose Your</p>
+                                                <p class="des">Size: 7</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-price text-right">
+                                            <span>$193,499</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="summary-total">
+                                <ul>
+                                    <li class="d-flex justify-content-between flex-wrap"><span>Cart Subtotal</span><span>$193,499</span></li>
+                                    <li class="d-flex justify-content-between flex-wrap"><span>Shipping</span><span>$0</span></li>
+                                    <li class="d-flex justify-content-between flex-wrap"><span>Estimated Tex</span><span>$0</span></li>
+                                    <li class="d-flex justify-content-between flex-wrap"><span>Have a promo code? <span class="promo-code-toggle" href="#">Redeem now <i class=" ti-angle-down "></i></span></span>
+                                     <div class="promo-code mt-3" style="display:none;">
+                                        <input class="form-control" type="text" placeholder="Promo code" />
+                                        <button class="apply-btn">Apply</button>
+                                     </div>   
+                                    </li>
+                                </ul>
+                                <div class="total-price d-flex justify-content-between align-items-center mt-4">
+                                    <span>Total</span><span>$193,499</span>
+                                </div>
+                            </div>
+                            <ul class="useful-links d-flex justify-content-between align-items-center mt-3">
+                                <li><a href="#">Refund policy</a></li>
+                                <li><a href="#">Privacy policy</a></li>
+                                <li><a href="#">Terms of service</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </section>
+        <!-- SECTION END'S -->       
+    </div>
+     <!--- Footer Start --->
+     <footer>
+        <div class="container">
+            <div class="d-flex justify-content-between flex-wrap">
+                <ul class="links d-flex align-items-center flex-wrap">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Showcase</a></li>
+                    <li><a href="#">Product</a></li>
+                </ul>
+                <ul class="social d-flex align-items-center">
+                    <li><a href="#" title="Facebook"><i class="ti-facebook"></i></a></li>
+                    <li><a href="#" title="Twitter"><i class="ti-twitter-alt"></i></a></li>
+                    <li><a href="#" title="Instagram"><i class="ti-instagram"></i></a></li>
+                    <li><a href="#" title="Youtube"><i class="ti-youtube"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!--- Footer End --->
+    <!-- PAGE END'S -->
+    <!-- JS library -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/intlTelInput.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/11.0.9/js/utils.js"></script>
+     <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

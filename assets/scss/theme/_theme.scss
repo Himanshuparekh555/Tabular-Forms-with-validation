@@ -1,0 +1,174 @@
+
+/*--------------------------------------------------------------
+ Theme
+----------------------------------------------------------------*/
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex: 1 0 auto; 
+}
+.form-col{
+    width: 60%;
+    padding-left: 10px;
+    padding-right: 10px;
+    order: 0;
+    @include media-mobile-lg {
+        width: 100%;
+        order: 1;
+    }
+    .form{      
+        background-color: $white;
+        padding: 20px;
+        @include box-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+        & .title1{
+            text-align: center;
+        }
+        & .information-heading{ 
+            margin: 30px 0 15px 0;
+            & p{
+                margin-bottom: 0;
+                font-weight: 500;
+                font-size: 16px;
+                & a{
+                    color: $primary-color;
+                    &:hover{
+                        color: $black;
+                    }       
+                }
+            }
+        }
+        & .back-link{
+            color: $primary-color;
+            font-size: 14px;
+            font-weight: 600;
+            &:hover{
+                color: $black;
+            }
+        }
+    }
+}
+.sidebar{
+    width: 40%;
+    padding-left: 10px;
+    padding-right: 10px;   
+   
+    order: 1;
+    @include media-mobile-lg {
+        width: 100%;
+        order: 0;
+    }
+    & .summary{    
+        position: -webkit-sticky;
+        position: sticky;
+        top: 20px;
+        & .items{
+            & .item-list{
+                background-color: $white;
+                padding: 10px;
+                @include box-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+                & .col-info{
+                    width: 75%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    @include media-mobile-sm {
+                        width: 100%;
+                    }
+                    & .product-img{
+                        border: 1px solid $gray;
+                        margin-right: 10px;       
+                        position: relative;               
+                        & img{
+                            width: 80px;
+                        }
+                        & .product-qty{
+                            background-color: $gray;
+                            width: 18px;
+                            height: 18px;
+                            @include border-radius(100px);
+                            @include position(absolute,$top:-6px,$right:-6px);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 13px;
+                            font-weight: bold;
+                        }
+                    }
+                    & .name{
+                        font-size: 14px;
+                    }
+                    & .des{
+                        font-size: 12px;
+                        color: $gray;
+                        margin-top: 5px;
+                    }
+                }
+                & .col-price{
+                    width: 25%;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    & span{
+                        font-size: 14px;
+                    }
+                    @include media-mobile-sm {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        & .summary-total{
+            background-color: $white;
+            padding: 10px;
+            @include box-shadow(0 0 2px rgba(0, 0, 0, 0.2));
+            & ul{
+                & li{
+                    margin: 12px 0;
+                    & span{
+                        font-size: 14px;
+                        & .promo-code-toggle{
+                            cursor: pointer;
+                            color: $primary-color;
+                            &:hover{
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
+            & .promo-code{
+                position: relative;
+                & .apply-btn{
+                    background: none;
+                    border: none;
+                    @include position(absolute, $top:0,$right:0,$bottom:0);
+                    padding: 10px 15px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+            & .total-price{
+                border-top: 1px solid $gray;
+                padding-top: 15px;
+                & span{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    & .useful-links{
+        & li{
+            padding: 0 10px;
+            text-align: center;
+            & a{
+                font-size: 13px;
+                font-weight: 500;
+                color: $primary-color;
+                &:hover{
+                    color: $black;
+                }
+            }
+        }
+    }
+}

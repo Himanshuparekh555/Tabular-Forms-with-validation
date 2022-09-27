@@ -1,0 +1,47 @@
+/* -------------------------------------------
+    Tab
+---------------------------------------------- */
+/* Tabs */
+.tabs {
+   
+    & #tabs-nav{ 
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;   
+        flex-wrap: wrap;   
+        @include media-mobile-md {
+            display: block;
+            white-space: nowrap;
+            overflow: auto;
+        } 
+        & li{      
+            margin-right: -1px;
+            min-width: 255px;
+            border: 1px solid $gray;
+            text-align: center;   
+            &:first-child{
+                @include border-radius(5px 0 0 5px);
+            }    
+            &:last-child{
+                @include border-radius(0 5px 5px 0);
+            }    
+            &.active{
+                border: 1px solid $primary-color;               
+            }
+            & a{           
+                padding:20px;
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                color: $black;
+                & i{
+                    margin-right: 15px;
+                    font-size: 20px;
+                }
+            }
+            @media screen and (max-width:992px) {
+                display: inline-block;
+            }
+        }
+    }
+  }
